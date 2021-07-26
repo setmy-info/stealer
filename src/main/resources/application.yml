@@ -1,0 +1,14 @@
+spring:
+    main:
+        banner-mode: "off"
+
+logging:
+    pattern:
+        console:
+
+repositories:
+    code-repositories:
+        - 
+            shortName: stealer-test-a
+            url: https://github.com/setmy-info/stealer-test-a.git
+            type: git

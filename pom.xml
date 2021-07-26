@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.3</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>info.setmy</groupId>
+    <artifactId>stealer</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>stealer</name>
+    <description>Stealer project</description>
+    <url>https://github.com/setmy-info/stealer</url>
+
+    <properties>
+        <info.setmy.version>1.2.0-SNAPSHOT</info.setmy.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <encoding.level>UTF-8</encoding.level>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
+        <java.version>16</java.version>
+        <maven.build.timestamp.format>dd.MM.yyyy HH:mm</maven.build.timestamp.format>
+        <buildTimestamp>${maven.build.timestamp}</buildTimestamp>
+        <dependency.locations.enabled>false</dependency.locations.enabled>
+
+        <junit5.version>5.7.2</junit5.version>
+        <junit.platform.version>1.7.2</junit.platform.version>
+        <mockito.version>3.11.1</mockito.version>
+        <assertj.version>3.19.0</assertj.version>
+        <jacoco.version>0.8.7</jacoco.version>
+        <failsafe.version>2.22.2</failsafe.version>
+        <surefire.version>2.22.2</surefire.version>
+        <log4j.verions>1.2.17</log4j.verions>
+        <log4j2.verions>2.14.1</log4j2.verions>
+        <logback.verions>1.2.3</logback.verions>
+        <slf4j.version>1.7.30</slf4j.version>
+        <lucene.version>8.8.2</lucene.version>
+        <groovy.version>3.0.8</groovy.version>
+        <cucumber.version>6.10.4</cucumber.version>
+        <pitest.version>1.6.7</pitest.version>
+        <jersey.version>3.0.2</jersey.version>
+        <jackson.version>2.12.3</jackson.version>
+        <dockerfile-maven-version>1.4.13</dockerfile-maven-version>
+        <dependency.check.version>6.2.2</dependency.check.version>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <spring.boot.verions>2.5.3</spring.boot.verions>
+        <rest.assured.version>4.4.0</rest.assured.version>
+        <liquibase.version>4.4.0</liquibase.version>
+        <infinispan.version>12.1.4.Final</infinispan.version>
+        <quartz.verions>2.3.2</quartz.verions>
+        <lombok.version>1.18.20</lombok.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <swagger.version>3.0.0</swagger.version>
+        <swagger.annotations.version>1.6.2</swagger.annotations.version>
+        <swagger.models.version>1.6.1</swagger.models.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+                <filtering>true</filtering>
+            </testResource>
+        </testResources>
+    </build>
+</project>
