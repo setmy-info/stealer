@@ -7,8 +7,21 @@ logging:
         console:
 
 repositories:
-    code-repositories:
-        - 
-            shortName: stealer-test-a
-            url: https://github.com/setmy-info/stealer-test-a.git
-            type: git
+    - 
+        shortName: stealer-test-a
+        url: https://github.com/setmy-info/stealer-test-a.git
+        type: git
+    -
+        shortName: stealer-test-b
+        url: https://github.com/setmy-info/stealer-test-b.git
+        type: git
+
+repoParts:
+    -
+        shortName: stealer-test-a
+        branchName: master
+        folderName: 
+    -
+        shortName: stealer-test-b
+        branchName: develop
+        folderName: subfolder

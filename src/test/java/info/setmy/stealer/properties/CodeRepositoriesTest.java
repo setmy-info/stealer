@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class CodeRepositoriesTest {
 
     @Autowired
-    private CodeRepositories codeRepositories;
+    private RepositoriesProperties codeRepositories;
 
     @Test
     public void instanceExists() {
@@ -18,9 +18,9 @@ public class CodeRepositoriesTest {
 
     @Test
     public void testGetCodeRepositories() {
-        assertThat(codeRepositories.getCodeRepositories()).asList().size().isEqualTo(1);
-        assertThat(codeRepositories.getCodeRepositories().get(0).getShortName()).isEqualTo("stealer-test-a");
-        assertThat(codeRepositories.getCodeRepositories().get(0).getUrl()).isEqualTo("https://github.com/setmy-info/stealer-test-a.git");
-        assertThat(codeRepositories.getCodeRepositories().get(0).getType()).isEqualTo("git");
+        assertThat(codeRepositories).asList().size().isEqualTo(1);
+        assertThat(codeRepositories.get(0).getShortName()).isEqualTo("stealer-test-a");
+        assertThat(codeRepositories.get(0).getUrl()).isEqualTo("https://github.com/setmy-info/stealer-test-a.git");
+        assertThat(codeRepositories.get(0).getType()).isEqualTo("git");
     }
 }
